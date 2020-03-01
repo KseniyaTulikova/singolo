@@ -9,3 +9,9 @@
 
   src: url(./assets/Lato-Light.ttf) format("truetype");
 }
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url(./assets/Lato-Black.ttf) format("truetype");
+}
+
