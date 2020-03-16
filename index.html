@@ -15,39 +15,55 @@
             <h1>SINGOLO<sup>*</sup></h1>
         </section>
         <nav>
-            <ul>
-                <li>
-                    <a href="#">HOME</a>
+            <ul class="navigation-bar">
+                <li class = "item clicked-page">
+                    <a href="#home">HOME</a>
                 </li>
-                <li>
-                    <a href="#">SERVICES</a>
+                <li class = "item">
+                    <a href="#services">SERVICES</a>
                 </li>
-                <li>
-                    <a href="#">PORTFOLIO</a>
+                <li class = "item">
+                    <a href="#portfolio">PORTFOLIO</a>
                 </li>
-                <li>
-                    <a href="#">ABOUT</a>
+                <li class = "item">
+                    <a href="#about_us">ABOUT</a>
                 </li>
-                <li>
-                    <a href="#">CONTACT</a>
+                <li class = "item">
+                    <a href="#contact">CONTACT</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="slider">
-            <div class="iPhone-section">
-                <div class="vertical-layer"></div>
-                <div class="horisontal-layer"></div>
-                <img src="./assets/iPhone Vertical.jpg" alt="Vertical iPhone" class="vertical-iphone" ">
-                <img src=" ./assets/iPhone Vertical.jpg " alt="Horizontal iPhone " class="horizontal-iphone ">
-            </div>
-
-
+        <section id = 'home' class="slider scroll-point">
             <img src="./assets/chevron-left-solid.svg " alt="left shevron " class="left-chevron ">
+            <div class="slider-container">
+                <div class="iPhone-section second slide"></div>
+                <div class="iPhone-section first slide active">
+                    <div class="vertical-iphone">
+                        <div class="vertical-layer"></div>
+                        <div class="button-home"></div>
+                    </div>
+                    <div class="horizontal-iphone">
+                        <div class="horizontal-layer "></div>
+                        <div class="button-home"></div>
+                    </div>
+                </div>
+                <div class="iPhone-section second slide"></div>
+                <div class="iPhone-section first slide">
+                    <div class="vertical-iphone">
+                        <div class="vertical-layer"></div>
+                        <div class="button-home"></div>
+                    </div>
+                    <div class="horizontal-iphone">
+                        <div class="horizontal-layer "></div>
+                        <div class="button-home"></div>
+                    </div>
+                </div>
+            </div>
             <img src="./assets/chevron-right-solid.svg " alt="right shevron " class="right-chevron ">
         </section>
-        <section class="services ">
+        <section id ="services" class="services scroll-point" >
             <section>
                 <h1>Our Services</h1>
                 <div>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo
@@ -117,32 +133,32 @@
                 </section>
             </section>
         </section>
-        <section class="portfolio ">
+        <section id ="portfolio" class="portfolio scroll-point">
             <h1>Portfolio</h1>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <section class="filter-of-projects ">
-                <button type="button " class="active ">All</button>
-                <button type="button ">Web Design</button>
-                <button type="button ">Graphic Design</button>
-                <button type="button "> Artwork</button>
+                <button type="button" class="active" data-filter = "all">All</button>
+                <button type="button" data-filter = "web-design">Web Design</button>
+                <button type="button" data-filter = "graphic-design">Graphic Design</button>
+                <button type="button" data-filter = "artwork"> Artwork</button>
             </section>
             <section class="projects ">
-                <img class="project-img " src="./assets/project_1.jpg " alt="project_1 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_2.jpg " alt="project_2 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_3.jpg " alt="project_3 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_4.jpg " alt="project_4 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_5.jpg " alt="project_5 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_6.jpg " alt="project_6 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_7.jpg " alt="project_7 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_8.jpg " alt="project_8 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_9.jpg " alt="project_9 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_10.jpg " alt="project_10 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_11.jpg " alt="project_11 " width="220px " height="187px " />
-                <img class="project-img " src="./assets/project_12.jpg " alt="project_12 " width="220px " height="187px " />
+                <img class="project-img web-design" src="./assets/project_1.jpg " alt="project_1 " width="220px " height="187px " />
+                <img class="project-img graphic-design" src="./assets/project_2.jpg " alt="project_2 " width="220px " height="187px " />
+                <img class="project-img artwork" src="./assets/project_3.jpg " alt="project_3 " width="220px " height="187px " />
+                <img class="project-img graphic-design" src="./assets/project_4.jpg " alt="project_4 " width="220px " height="187px " />
+                <img class="project-img web-design" src="./assets/project_5.jpg " alt="project_5 " width="220px " height="187px " />
+                <img class="project-img artwork" src="./assets/project_6.jpg " alt="project_6 " width="220px " height="187px " />
+                <img class="project-img artwork" src="./assets/project_7.jpg " alt="project_7 " width="220px " height="187px " />
+                <img class="project-img graphic-design" src="./assets/project_8.jpg " alt="project_8 " width="220px " height="187px " />
+                <img class="project-img web" src="./assets/project_9.jpg " alt="project_9 " width="220px " height="187px " />
+                <img class="project-img artwork" src="./assets/project_10.jpg " alt="project_10 " width="220px " height="187px " />
+                <img class="project-img web-design" src="./assets/project_11.jpg " alt="project_11 " width="220px " height="187px " />
+                <img class="project-img graphic-design" src="./assets/project_12.jpg " alt="project_12 " width="220px " height="187px " />
             </section>
     
         </section>
-        <section class="about-us ">
+        <section id ="about_us" class="about-us scroll-point">
             <h1>About Us</h1>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <section class="employee ">
@@ -155,7 +171,7 @@
                             <a href="# "><img src="./assets/facebook.svg " alt="FaceBook " width="32px " height="32px "></a>
                             <a href="# "><img src="./assets/google.svg " alt="Google " width="32px " height="32px "></a>
                             <a href="# "><img src="./assets/twitter.svg " alt="Twitter " width="32px " height="32px "></a>
-                            <a href="# "><img src="./assets/linkedin.svg " alt="LinkedIn " width="32px " height="32px "></a>
+                            <a href="# "><img src="./assets/linkedIn.svg " alt="LinkedIn " width="32px " height="32px "></a>
                         </section>
                     </section>
                 </div>
@@ -168,7 +184,7 @@
                             <a href="# "><img src="./assets/facebook.svg " alt="FaceBook " width="32px " height="32px "></a>
                             <a href="# "><img src="./assets/google.svg " alt="Google " width="32px " height="32px "></a>
                             <a href="# "><img src="./assets/twitter.svg " alt="Twitter " width="32px " height="32px "></a>
-                            <a href="# "><img src="./assets/linkedin.svg " alt="LinkedIn " width="32px " height="32px "></a>
+                            <a href="# "><img src="./assets/linkedIn.svg " alt="LinkedIn " width="32px " height="32px "></a>
                         </section>
                     </section>
     
@@ -188,7 +204,10 @@
                 </div>
             </section>
         </section>
-        <section class="get-a-quote ">
+        <section id ="contact" class="get-a-quote scroll-point">
+            <div class="modal-box">
+                <input type="button" value="OK" class="ok-btn">
+            </div>
             <div>
                 <h1>Get a Quote</h1>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -196,11 +215,11 @@
             </div>
             <section class="contacts ">
                 <div class="write-to-us ">
-                    <form onsubmit="alert( 'Thank you! We will reply to you soon.')">
-                        <input type="text" class="info-button" placeholder="Name (Required)" required>
-                        <input type="email" class="info-button" placeholder="Email (Required)" required>
-                        <input type="text" class="info-button" placeholder="Subject ">
-                        <textarea class="write-to-us-textarea" cols="33 " rows="50 " value="Project-description" placeholder="Describe your project in detail... "></textarea>
+                    <form onsubmit="return formHandler()" name = "get-a-quote-form">
+                        <input type="text" name ="name" class="info-button" placeholder="Name (Required)" required>
+                        <input type="email" name ="email" class="info-button" placeholder="Email (Required)" required>
+                        <input type="text" name ="subject" class="info-button" placeholder="Subject ">
+                        <textarea class="write-to-us-textarea"  name ="description" cols="33 " rows="50 " value="Project-description" placeholder="Describe your project in detail... "></textarea>
                         <input type="submit" value="Send my form! " class="send-form ">
                     </form>
                 </div>
@@ -212,13 +231,13 @@
                     <div class="contact-detailes ">
                         <ul>
                             <li>
-                                <a target="_blank " href=" https://www.google.com/maps/search/Elm+St.+14%2F05+Lost+City/@46.4456398,30.7644946,14z/data=!3m1!4b1 "><img class="contact-icon " src="./assets/location_contact_icon.svg " alt="Location-icon ">Elm St. 14/05 Lost City</a>
+                                <a target="_blank" href=" https://www.google.com/maps/search/Elm+St.+14%2F05+Lost+City/@46.4456398,30.7644946,14z/data=!3m1!4b1 "><img class="contact-icon " src="./assets/location_contact_icon.svg " alt="Location-icon ">Elm St. 14/05 Lost City</a>
                             </li>
                             <li>
-                                <a href="tel:03528 331 86 35 "><img class="contact-icon " src="./assets/phone_contact_icon.svg " alt="Phone-icon ">03528 331 86 35</a>
+                                <a href="tel:035283318635"><img class="contact-icon " src="./assets/phone_contact_icon.svg " alt="Phone-icon ">03528 331 86 35</a>
                             </li>
                             <li>
-                                <a href="mailto:info@singolo.com "> <img class="contact-icon " src="./assets/mail_contact_icon.svg " alt="E-mail-icon ">info@singolo.com</a>
+                                <a href="mailto:info@singolo.com"> <img class="contact-icon " src="./assets/mail_contact_icon.svg " alt="E-mail-icon ">info@singolo.com</a>
                             </li>
                         </ul>
                     </div>
@@ -226,8 +245,8 @@
             </section>
         </section> 
     </main>
-    <footer>
-        <section class="copyright-section ">
+    <footer id = "footer">
+        <section class="copyright-section">
             <span class="copyright ">&copy; Copyright 2013</span>
         </section>
 
@@ -235,10 +254,10 @@
             <a href="# "><img src="./assets/facebook.svg " alt="FaceBook " width="32px " height="32px "></a>
             <a href="# "><img src="./assets/google.svg " alt="Google " width="32px " height="32px "></a>
             <a href="# "><img src="./assets/twitter.svg " alt="Twitter " width="32px " height="32px "></a>
-            <a href="# "><img src="./assets/linkedin.svg " alt="LinkedIn " width="32px " height="32px "></a>
+            <a href="# "><img src="./assets/linkedIn.svg " alt="LinkedIn " width="32px " height="32px "></a>
         </section>
     </footer>
-    
+    <script src="./index.js" type="text/javascript"></script>
 </body>
 
 </html>
