@@ -7,12 +7,54 @@ window.onload = function () {
     modalBoxHandler();
     scrollHandler();
     navigationAnchorHandler();
+    navigationMobileAnchorHandler();
+    navMobileHandler();
+    showMobileNavHandler();
 }
 
 //Block of functions for header 
+const showMobileNavHandler = () => {
+    let navBtn = document.querySelector('.mobile-nav-img');
+
+    navBtn.addEventListener('click', () => {
+        rotateBtn(navBtn);
+        showHideNav();
+    });
+}
+
+const showHideNav = () => {
+    document.querySelector('.mobile-nav-menu').classList.toggle('active-mobile-bar');
+}
+
+const rotateBtn = (element) => {
+    element.classList.toggle('btn-rotate');
+}
+
 const navigationAnchorHandler = () => {
     let navAhchors = document.querySelectorAll('.navigation-bar > li > a');
-    navAhchors.forEach(anchor => {
+    goToLink(navAhchors);
+    
+}
+
+const navigationMobileAnchorHandler = () => {
+    let navMobileAnchors = document.querySelectorAll('.mobile-navigation-bar > li > a');
+    goToLink(navMobileAnchors);
+}
+
+const navMobileHandler = () => {
+    let mobileNavBar = document.querySelector('.mobile-navigation-bar');
+    let mobileNavBarChilds = mobileNavBar.querySelectorAll('.item');
+    let navBtn = document.querySelector('.mobile-nav-img');
+
+    mobileNavBar.addEventListener('click', (e) => {
+        addClassToNavBar(e, mobileNavBarChilds);
+        showHideNav();
+        rotateBtn(navBtn);
+    });
+}
+
+const goToLink = (links) => {
+    links.forEach(anchor => {
 
         anchor.addEventListener('click', (event) => {
             event.preventDefault();
@@ -28,8 +70,10 @@ const navigationAnchorHandler = () => {
 
 const navBarHandler = () => {
     let navBar = document.querySelector('.navigation-bar');
+    let navBarChilds = navBar.querySelectorAll('.item');
+
     navBar.addEventListener('click', (e) => {
-        addClassToNavBar(e, navBar);
+        addClassToNavBar(e, navBarChilds);
     });
 }
 
@@ -38,9 +82,8 @@ const removeClassFromElement = (nameOfClass, elements) => {
 }
 
 const addClassToNavBar = (event, collectionOfElems) => {
-    let allChildsOfElement = collectionOfElems.querySelectorAll('.navigation-bar .item');
-
-    removeClassFromElement('clicked-page', allChildsOfElement);
+  
+    removeClassFromElement('clicked-page', collectionOfElems);
 
     event.target.parentNode.classList.add('clicked-page');
 }
